@@ -1,0 +1,1705 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'>
+		<title>yahya.codes</title>
+		<link rel="stylesheet" type="text/css" href="./css/Yahya.css">
+		<link rel="icon" href="./img/iconT.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	transition: all 0.5s;
+}
+*::selection {
+	color: rgba(28,28,28,1);
+	background: #79ffe1;
+}
+::-webkit-scrollbar-track
+{
+	border: 1px solid black;
+	background-color: #000000;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #555;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+
+body {
+	background-color: #0a192f;
+	overflow-x: hidden;
+	width: 100vw;
+	height: 100vh;
+}
+
+/* Navbar */
+nav {
+	position: fixed;
+	background: #0a192f;
+	height: 70px;
+	width: 100%;
+	z-index: 20;
+}
+nav .logo {
+	width: 45px;
+	margin: 5px;
+}
+nav #nav_in_pc {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: inline;
+	padding: 10px;
+	z-index: 4;
+}
+nav #nav_in_pc button {
+	display: inline;
+	padding: 5px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	color: #fff;
+	font-size: 25px;
+	background: transparent;
+	margin: 5px;
+	cursor: pointer;
+	text-decoration: none;
+	font-family: 'Abel';
+}
+nav #nav_in_pc button:hover {
+	border-bottom: 1px solid #3c958c;
+	color: #3c958c;
+}
+nav #nav_in_pc button:active {
+	transform: scale(0.8);
+}
+nav #nav_in_pc button:focus {
+	border-bottom: 1px solid #59e5c6;
+	color: #3c958c;
+}
+#nav_main_oppener_in_mobile {
+	position: fixed;
+	width: 60px;
+	height: 50px;
+	right: 0;
+	top: 0;
+	display: none;
+	z-index: 30;
+}
+#nav_main_oppener_in_mobile:hover span {
+	width: 30px;
+}
+#nav_main_oppener_in_mobile span {
+	position: absolute;
+	height: 2.5px;
+	border-radius: 25px;
+	background: white;
+	margin-right: 19px;
+	right: 0;
+}
+#nav_main_oppener_in_mobile .span1 {
+	margin-top: 17px;
+	width: 25px;
+	rotate: 0deg;
+}
+#nav_main_oppener_in_mobile .span2 {
+	margin-top: 24px;
+	width: 20px;
+	opacity: 1;
+}
+#nav_main_oppener_in_mobile .span3 {
+	margin-top: 31px;
+	width: 30px;
+	rotate: 0deg;
+}
+main.nav_main_in_mobile {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #0b305a;
+	right: -100%;
+	z-index: 1;
+	text-align: center;
+	align-items: center;
+	display:none;
+}
+#nav_main_in_mobile_, #nav_main_in_mobile_anim{display:none}
+main.nav_main_in_mobile a {
+	display: block;
+	margin-top: 50px;
+	color: #abdbe3;
+	border: none;
+	background: transparent;
+	padding: 9px;
+	font-size: 30px;
+	text-decoration: none;
+}
+main.nav_main_in_mobile_anim a:hover {
+	letter-spacing: 6px;
+}
+main.nav_main_in_mobile_anim a {
+	display: block;
+	margin-top: 50px;
+	color: #abdbe3;
+	border: none;
+	background: transparent;
+	padding: 9px;
+	font-size: 30px;
+	text-decoration: none;
+	letter-spacing: normal;
+	font-family: sans-serif;
+}
+/* end of navbar */
+
+/* header */
+header {
+	margin-top: 50px;
+	position: absolute;
+	background: #1A2238;
+	width: 100%;
+	height: 474px;
+	z-index: 1;
+	padding: 40px;
+	padding-left: 90px;
+}
+header .see_my_works_btn {
+	text-align: center;
+	background: linear-gradient(93deg, rgb(8, 0, 255) 0.00%, rgb(227, 43, 227) 100.00%);
+	color: white;
+	border: none;
+	border-radius: 4px;
+	outline: none;
+	cursor: pointer;
+	padding: 10px;
+	text-decoration: none;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin-right: 160px;
+	margin-bottom: 30px;
+	width: 120px;
+	height: 20px;
+}
+header .see_my_works_btn:hover {
+	opacity: 0.8;
+	width: 140px;
+}
+header .see_my_works_btn:hover::after {
+	content: " →";
+}
+header .content_me .spa {
+	font-size: 65px;
+}
+
+.moon-outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+	position: absolute;
+	top: 25px;;
+	right: 140px;
+}
+.moon {
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    animation: shine 2s ease-in-out infinite;
+    background-color: rgb(230, 224, 224);
+    box-shadow: 0px 0px 8px 2px rgba(235, 235, 231, 0.301);
+    position: relative;
+    overflow: hidden;
+}
+.details {
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    background-color: rgba(165, 165, 165, 0.089);
+}
+.details.one {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: inset 2px 0 4px rgba(167, 167, 167, 0.685);
+}
+.details.two {
+    position: absolute;
+    top: 60px;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: inset -2px 0 4px rgba(167, 167, 167, 0.685);
+}
+.details.three {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: inset 2px 0 4px rgba(167, 167, 167, 0.685);
+}
+.details.four {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: inset 2px 0 4px rgba(167, 167, 167, 0.585);
+}
+/* end of header */
+
+/* loading_in_enter_the_web */
+#loading_in_enter_the_web {
+	position: fixed;
+	z-index: 25;
+	background: rgba(0,0,0,0.5);
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+.darkWeb {
+	position: fixed;
+	z-index: 22;
+	background: rgba(0,0,0,0.5);
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+#loading_in_enter_the_web img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 130px;
+	rotate: 0deg;
+}
+#loading_in_enter_the_web #log-Y {
+	animation: log_y 2s linear;
+	animation-fill-mode: forwards;
+}
+#loading_in_enter_the_web #logo-AHYA {
+	animation: logo_ahya 2s linear;
+	animation-fill-mode: forwards;
+}
+#loading_in_enter_the_web #logo-CODES {
+	padding-top: 100px;
+	animation: logo_codes 2s linear;
+	animation-fill-mode: forwards;
+}
+
+
+@keyframes log_y {
+	0% {
+		rotate: 0deg;
+		padding-right: 0px;
+	}
+	50% {
+		rotate: 360deg;
+		padding-right: 0px;
+	}
+	100% {
+		rotate: 360deg;
+		padding-right: 160px;
+	}
+}
+@keyframes logo_ahya {
+	0% {
+		opacity: 0;
+		rotate: 0deg;
+		padding-left: 0px;
+	}
+	50% {
+		opacity: 0;
+		rotate: 360deg;
+		padding-left: 0px;
+	}
+	100% {
+		opacity: 1;
+		rotate: 360deg;
+		padding-left: 50px;
+	}
+}
+@keyframes logo_codes {
+	0% {
+		opacity: 0;
+		rotate: 0deg;
+		padding-left: 0px;
+	}
+	50% {
+		opacity: 0;
+		rotate: 360deg;
+		padding-left: 0px;
+	}
+	100% {
+		opacity: 1;
+		rotate: 360deg;
+		padding-left: 50px;
+	}
+}
+
+.darkWeb button {
+	padding: 2px;
+	background: transparent;
+	outline: none;
+	border: none;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	color: #9ecaed;
+	text-decoration: none;
+	margin: 10px;
+	font-size: 20px;
+	font-family: 'Inconsolata';
+	cursor: pointer;
+}
+.darkWeb button:hover {
+	padding-bottom: 5px;
+	text-shadow: 0 10px 10px white;
+}
+
+
+#first_easter_egg_ad {
+	position: fixed;
+	transform: scale(1);
+	background: #053e4c;
+	width: 295px;
+	text-align: center;
+	height: 500px;
+	border-radius: 25px;
+	z-index: 23;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	margin: auto;
+	padding: 8px;
+	font-family: 'Abel';
+	color: #81dff7;
+	box-shadow:0px 0px 50px 30px #009dff;
+	transform: scale(0);
+}
+#first_easter_egg_ad::before {
+	content: '';
+	width: 10px;
+	height: 10px;
+	position: fixed;
+	box-shadow:0px 0px 50px 30px #009dff;
+	border-radius: 50%;
+	background: #fff;
+	animation: first_easter_egg_ad_bf 5s linear infinite;
+}
+#first_easter_egg_ad::after {
+	content: '';
+	width: 10px;
+	height: 10px;
+	position: fixed;
+	box-shadow:0px 0px 50px 30px #009dff ;
+	border-radius: 50%;
+	background: #fff;
+	animation: first_easter_egg_ad_af 5s linear infinite;
+}
+@keyframes first_easter_egg_ad_bf {
+	0% {
+		top: -80px;
+		left: -80px;
+	}
+	25% {
+		top: 580px;
+		left: -80px;
+	}
+	50% {
+		top: 580px;
+		left: 375px;
+	}
+	75% {
+		top: -80px;
+		left: 375px;
+	}
+	100% {
+		top: -80px;
+		left: -80px;
+	}
+}
+@keyframes first_easter_egg_ad_af {
+	0% {
+		top: 580px;
+		left: 375px;
+	}
+	25% {
+		top: -80px;
+		left: 375px;
+	}
+	50% {
+		top: -80px;
+		left: -80px;
+	}
+	75% {
+		top: 580px;
+		left: -80px;
+	}
+	100% {
+		top: 580px;
+		left: 375px;
+	}
+}
+#first_easter_egg_ad button {font-size:20px;position:absolute;left:0;right:0;margin:auto;height:50px;cursor:pointer;outline:none;border:none;text-align:center;}
+#first_easter_egg_ad .keep_eggs {
+	bottom:50px;
+	background: #0c98ba;
+}
+#first_easter_egg_ad .nah_im_not_in_game {
+	bottom:0;
+	border-bottom-left-radius:25px;
+	border-bottom-right-radius:25px;
+	background: #0eb6df;
+}
+#first_easter_egg_ad button:hover {
+	background: #064d5e;
+	color: white;
+}
+#first_easter_egg_ad:hover ~ #cursor_of_light {
+	opacity: 0;
+}
+
+/* end of loading_in_enter_the_web */
+
+/* footer */
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: transparent;
+	border-right: 2px solid #9ecaed;
+	box-shadow: 0 10px 10px #9ecaed;
+	padding:2px;
+	z-index: 15;
+	font-family: 'Inconsolata';
+}
+footer svg {
+	width: 20;
+	opacity: 1;
+	rotate: 0deg;
+}
+footer svg:hover {
+	opacity: 0.8;
+	rotate: 360deg;
+}
+footer a span {
+	position: absolute;
+	width: 1px;
+	height: auto;
+	display: inline;
+	text-decoration: none;
+	color: white;
+	margin-left: -20px;
+	opacity: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	transition: all 1s;
+	background-image: linear-gradient( 65.9deg, rgba(85,228,224,1) 5.5%, rgba(75,68,224,0.74) 54.2%, rgba(64,198,238,1) 55.2%, rgba(177,36,224,1) 98.4% );
+	background-position: 0px;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow:-1px 0px 20px #ffffff;
+}
+footer a:hover span {
+	position: absolute;
+	width: 120px;
+	height: auto;
+	display: inline;
+	text-decoration: none;
+	color: white;
+	margin-left: 20px;
+	opacity: 1;
+	animation: linear_span_text_of_share 2s linear infinite;
+}
+@keyframes linear_span_text_of_share {
+	0% {
+		background-position: 0px;
+	}
+	100% {
+		background-position: 120px;
+	}
+}
+/* end of footer */
+
+/* body_finally */
+
+.body_finally {
+	position: absolute;
+	width: 100%;
+	color: #fff;
+	background: #000;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	z-index: 2;
+	height: auto;
+	font-family: 'Inconsolata', monospace;
+}
+.body_finally h1 {
+	position: relative;
+	margin-left: 50px;
+}
+.body_finally p {
+	margin-left: 50px;
+	color: #7e88a5;
+	font-size: 20px;
+	word-spacing: 3.5px;
+	letter-spacing: 2px;
+}
+.body_finally p.introducing_my_self {
+	max-width: 674px;
+	float: left;
+}
+.body_finally h1::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: #CCD6F6;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: -2;
+}
+.body_finally h1 span.span_upper_the_line {
+	display: block;
+	height: 2px;
+	background: #000;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: -1;
+}
+.body_finally img.sideImgAboutMe, .body_finally span.span_of_the_sideImgAboutMe {
+	width: 350px;
+	float: right;
+	display: inline;
+}
+.body_finally img.sideImgAboutMe {
+	filter: grayscale(100%);
+	margin-right: 18px;
+	border-radius: 25px;
+}
+.body_finally img.sideImgAboutMe:hover {
+	filter: none;
+}
+.body_finally span.span_of_the_sideImgAboutMe {
+	height: 0px;
+	background: rgba(0,0,0,.5);
+	color: white;
+	position: absolute;
+	right: 18px;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	margin-top: 371.13px;
+	font-size: 0px;
+	text-align: center;
+}
+.body_finally img.sideImgAboutMe:hover ~ span.span_of_the_sideImgAboutMe {height:60px;font-size:30px;}
+.body_finally h1.some_things_ive_built_title {
+	margin-top: 450px;
+}
+
+
+
+.body_finally .files {
+	float: left;
+	margin-left: 47px;
+	background: #096b83;
+	height: 200px;
+	width: 200px;
+	padding: 2px;
+	border-radius: 25px;
+	text-align: center;
+	padding-top: 5px;
+	margin-top: 15px;
+	position: relative;
+}
+.body_finally .files .file_img {
+	width: 75px;
+}
+.body_finally .files .opentab {
+	width: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+}
+.body_finally .files h5 span {
+	background-image: linear-gradient( 68.4deg,  rgba(99,251,215,1) -0.4%, rgba(5,222,250,1) 100.2% );
+	background-position: 0px;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+}
+.body_finally .myskills {
+	margin-top: 315px;
+}
+.body_finally .s_kills {
+	background: #333;
+	margin-left: 80px;
+}
+.body_finally .skills {
+	text-align: right;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #0b89a8;
+	width:0%;
+	transition: all 2s ease-out;
+}
+.body_finally .contactContainer img {
+	width: 500px;
+	margin-left: 60px;
+	display: inline;
+}
+.body_finally .contactContainer .spna {
+	font-size: 40px;
+	display: inline;
+	float: left;
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 250px;
+}
+.body_finally .contactContainer .spna::before {
+	content: '';
+	display: inline;
+	float: left;
+	position: absolute;
+	background: #CCD6F6;
+	height: 550px;
+	width: 4px;
+	left: 43%;
+	top: -550%;
+}
+.body_finally .contactContainer .spna::after {
+	content: '';
+	display: inline;
+	float: left;
+	position: absolute;
+	background: #000;
+	height: 40%;
+	width: 4px;
+	left: 43%;
+	top: 35%;
+}
+.body_finally .contactContainer .contact_us {
+	display: inline;
+	position: absolute;
+	right: 100px;
+	margin: 15px;
+	width: 35%;
+	text-align: left;
+}
+.body_finally .contactContainer .contact_us .subBtn {
+	cursor: pointer;
+	padding: 3px;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid white;
+	background: transparent;
+	color: #CCD6F6;
+	width: auto;
+	height: 1.6em;
+	font-family: 'Inconsolata';
+	font-size: 28px;
+	left: 0;
+	right: 0;
+	display: block;
+	margin: auto;
+}
+.body_finally .contactContainer .contact_us .subBtn span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+.body_finally .contactContainer .contact_us .subBtn span:after {
+	content: '\bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+.body_finally .contactContainer .contact_us .subBtn:hover span {padding-right: 25px;}
+.body_finally .contactContainer .contact_us .subBtn:hover span:after {opacity: 1;right: 0;}
+.body_finally .contactContainer .contact_us .innerTxt {
+	text-align:center;
+	margin-top: 20px;
+	right:0;
+	left:0;
+	margin:auto;
+	display: none;
+}
+/* end of body_finally */
+
+#contacty {
+	width:0%;
+	height:0%;
+	z-index: 3;
+	position: fixed;
+	background: rgba(0,0,0,.5);
+	top:0;
+	left:-150%;
+}
+.contacty {
+	position: absolute;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	display: block;
+	margin: auto;
+	width: 300px;
+	height: 300px;
+}
+#contacty .contacty .subBtn {
+	cursor: pointer;
+	padding: 3px;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid white;
+	background: transparent;
+	color: #CCD6F6;
+	width: auto;
+	height: 1.6em;
+	font-family: 'Inconsolata';
+	font-size: 28px;
+	left: 0;
+	right: 0;
+	display: block;
+	margin: auto;
+}
+#contacty .contacty .subBtn span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+#contacty .contacty .subBtn span:after {
+	content: '\bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+#contacty .contacty .subBtn:hover span {padding-right: 25px;}
+#contacty .contacty .subBtn:hover span:after {opacity: 1;right: 0;}
+#contacty .contacty .innerText {
+	text-align:center;
+	margin-top: 20px;
+	right:0;
+	left:0;
+	margin:auto;
+	display: none;
+}
+
+#about {
+	width:0%;
+	height:0%;
+	z-index: 3;
+	position: fixed;
+	background: rgba(0,0,0,.5);
+	top:0;
+	left:-150%;
+	padding-top: 50px;
+	color: #fff;
+}
+
+.about_text {
+  width: 50%;
+}
+
+.img_in_about {
+  width: 40%;
+  clip-path: path("M 370 454 C 535 242 411 61 170 31 C 64 27 -21 145 49 305 C 171 387 159 490 368 453 M 435 83 C 458.3333 82.6667 501 160 505 82 C 440 -12 395 69 433 82 M 13 -4 C 17 -17 89 -8 48 49 S 25 22 -3 16 C 2.3333 9 -34 14 13 -5 M 498 369 C 511 358 533 346 525 350 C 542 319 503 292 478 307 S 549 318 486 353 C 443 356 477 409 498 369 M 56 447 C 61 412 119 410 117 420 C 151 447 157 471 141 480 C 120.3333 488 104 533 79 504 C 70.6667 486 45 477 56 447 M 284 30 C 284 23 297 15 303 24 C 283 33 290 36 284 30 M 440 267 C 490 194 488 132 404 146 M 112 350 C 168 494 360 579 341 442");
+}
+
+.img_in_about img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+/* JS Adds */
+.span1_anim {
+	margin-top: 20px;
+	rotate: 45deg;
+	width: 30px;
+}
+.span2_anim {
+	margin-top: 24px;
+	opacity: 0;
+	width: 30px;
+}
+.span3_anim {
+	margin-top: 20px;
+	rotate: -45deg;
+	width: 30px;
+}
+
+.nav_main_in_mobile_anim {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #0b305a;
+	right: 0;
+	z-index: 25;
+	text-align: center;
+	align-items: center;
+}
+#cursor_of_light {
+	width: 10px;
+	height: 10px;
+	background-color: #0ff;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	box-shadow: 0px 0px 170px 60px #0ff;
+	transition: 0.1s ease-out;
+	z-index: 99999999;
+}
+.disabled {
+	pointer-event: none;
+	opacity: 0.7;
+}
+.disabled_two {
+	pointer-event: none;
+	opacity: 0.7;
+}
+
+
+
+/* Responsive */
+@media only screen and (max-width: 1270px) {
+	.body_finally .files {
+		margin-left: 60px;
+		height: 220px;
+		width: 220px;
+	}
+	.body_finally .files span {
+		display: block;
+	}
+	.body_finally .myskills {
+		margin-top: 580px;
+	}
+}
+@media only screen and (max-width: 1145px) {
+	.body_finally .project1 {
+		margin-left: 155px;
+	}
+	.body_finally .project4 {
+		margin-left: 300px;
+	}
+}
+@media only screen and (max-width: 1120px) {
+	.body_finally p.introducing_my_self {
+		max-width: 500px;
+	}
+	.body_finally .contactContainer .contact_us {
+		right: 30px;
+	}
+}
+@media only screen and (max-width: 1059px) {
+	header .content_me .spa {
+		font-size: 35px;
+	}
+	.body_finally .project1 {
+		margin-left: 210px;
+	}
+	.body_finally .project2 {
+		margin-left: 60px;
+	}
+	.body_finally .project3 {
+		margin-left: 210px;
+	}
+	.body_finally .project4 {
+		margin-left: 60px;
+	}
+	.body_finally .project5 {
+		margin-left: 350px;
+	}
+	.body_finally .myskills {
+		margin-top: 850px;
+	}
+	.body_finally .contactContainer img {
+		width: 50%;
+	}
+	.body_finally .contactContainer .contact_us {
+		right: 0px;
+	}
+}
+@media only screen and (max-width: 969px) {
+	header {
+		padding-left: 20px;
+	}
+	.moon-outer {
+		height: 200px;
+		width: 200px;
+		top: 13px;;
+		right: 90px;
+	}
+	.body_finally p.introducing_my_self {
+		max-width: 400px;
+	}
+}
+@media only screen and (max-width: 838px) {
+	.body_finally p.introducing_my_self {
+		max-width: 674px;
+	}
+	.body_finally img.sideImgAboutMe {
+		float: none;
+		margin-left: 200px;
+	}
+	.body_finally span.span_of_the_sideImgAboutMe {
+		left: 200px;
+		float: none;
+	}
+	.body_finally h1.some_things_ive_built_title {
+		margin-top: 100px;
+	}
+	.body_finally .project1 {
+		margin-left: 150px;
+	}
+	.body_finally .project2 {
+		margin-left: 60px;
+	}
+	.body_finally .project3 {
+		margin-left: 150px;
+	}
+	.body_finally .project4 {
+		margin-left: 60px;
+	}
+	.body_finally .project5 {
+		margin-left: 300px;
+	}
+}
+@media only screen and (max-width: 744px) {
+	.body_finally .project1 {
+		margin-left: 100px;
+	}
+	.body_finally .project2 {
+		margin-left: 60px;
+	}
+	.body_finally .project3 {
+		margin-left: 100px;
+	}
+	.body_finally .project4 {
+		margin-left: 60px;
+	}
+	.body_finally .project5 {
+		margin-left: 250px;
+	}
+	.body_finally .contactContainer img {
+		width: 70%;
+		left: 0;
+		right: 0;
+		margin: auto;
+		display: block;
+	}
+	.body_finally .contactContainer .spna {
+		position: absolute;
+		margin-left: 0px;
+		margin-top: 5px;
+		left: 50%;
+	}
+	.body_finally .contactContainer .spna::before {
+		content: '';
+		height: 4px;
+		width: 800px;
+		left: -400px;
+		top: 50%;
+	}
+	.body_finally .contactContainer .spna::after {
+		content: '';
+		height: 4px;
+		width: 100%;
+		left: 0%;
+		top: 50%;
+	}
+	.body_finally .contactContainer .contact_us {
+		right:0;
+		left:0;
+		display: block;
+		margin: auto;
+		width: 80%;
+		margin-top: 50px;
+		margin-left: 60px;
+	}
+}
+@media only screen and (max-width: 628px) {
+	.moon-outer {
+		background: transparent;
+	}
+	.sun-outer {
+		background: transparent;
+	}
+	.body_finally img.sideImgAboutMe {
+		float: none;
+		margin-left: 100px;
+	}
+	.body_finally span.span_of_the_sideImgAboutMe {
+		left: 100px;
+		float: none;
+	}
+	.body_finally .files {
+		display: block;
+		float: none;
+		margin-left:0;
+		position: absolute;
+		left:0;
+		right:0;
+		margin: auto;
+	}
+	.body_finally .project1 {
+		margin-top: 15px;
+	}
+	.body_finally .project2 {
+		margin-top: 260px;
+	}
+	.body_finally .project3 {
+		margin-top: 520px;
+	}
+	.body_finally .project4 {
+		margin-top: 780px;
+	}
+	.body_finally .project5 {
+		margin-top: 1040px;
+	}
+	.body_finally .myskills {
+		margin-top: 1400px;
+	}
+}
+@media only screen and (max-width: 515px) {
+	.body_finally img.sideImgAboutMe {
+		float: none;
+		margin-left: 50px;
+	}
+	.body_finally span.span_of_the_sideImgAboutMe {
+		left: 50px;
+		float: none;
+	}
+}
+@media only screen and (max-width: 479px) {
+	nav #nav_in_pc {
+		display: none;
+	}
+	nav {
+		height: 50px;
+	}
+	nav .logo {
+		width: 35px;
+	}
+	#nav_main_oppener_in_mobile {
+		display: inline;
+	}
+	#nav_main_in_mobile_, #nav_main_in_mobile_anim, .nav_main_in_mobile{display:block}
+	header {
+		position: fixed;
+	}
+	.body_finally img.sideImgAboutMe {
+		float: none;
+		margin-left: 120px;
+		width: 200px;
+	}
+	.body_finally span.span_of_the_sideImgAboutMe {
+		left: 120px;
+		float: none;
+		margin-top: 136.36px;
+	}
+	.body_finally img.sideImgAboutMe:hover ~ span.span_of_the_sideImgAboutMe {
+		width: 200px;
+		height: 110px;
+	}
+	.body_finally { height:4000px; }
+}
+@media only screen and (max-width: 369px) {
+	.body_finally img.sideImgAboutMe {
+		float: none;
+		margin-left: 50px;
+		width: 200px;
+	}
+	.body_finally span.span_of_the_sideImgAboutMe {
+		left: 50px;
+		float: none;
+		margin-top: 136.36px;
+	}
+	.body_finally img.sideImgAboutMe:hover ~ span.span_of_the_sideImgAboutMe {
+		left: 50px;
+		float: none;
+		width: 200px;
+		margin-top: 136.36px;
+		height: 110px;
+	}
+}
+</style>
+	</head>
+	<body>
+		<!-- Navbar ... -->
+		<nav>
+			<img class="logo" src="./img/log-Y.png" />
+			<div id="nav_in_pc">
+				<button onclick="showHome_andCloseTheOthers_maybeNoHome()">Home</button>
+				<button onclick="showAbout_andCloseTheOthers()">About</button>
+				<button onclick="showPortfolio_andCloseTheOthers()">Portfolio</button>
+				<button onclick="showContact_andCloseTheOthers()">Contact</button>
+			</div>
+		</nav>
+		<p id="nav_main_oppener_in_mobile" onclick="openPhoneNav()">
+			<span class="span1" id="span1"></span>
+			<span class="span2" id="span2"></span>
+			<span class="span3" id="span3"></span>
+		</p>
+		<main id="nav_main_in_mobile_" class="nav_main_in_mobile">
+			<a onclick="showHome_andCloseTheOthers_maybeNoHome()">Home</a>
+			<a onclick="showAbout_andCloseTheOthers()">About</a>
+			<a onclick="showPortfolio_andCloseTheOthers()">Portfolio</a>
+			<a onclick="showContact_andCloseTheOthers()">Contact</a>
+		</main>
+		<!-- end of Navbar ... -->
+		
+		<!-- Header -->
+		<header><br><br><br><br>
+			<p class="content_me"><span style="font-family:'Abel';"><span style="color:#5ae7c8;">Hey There, I'm</span><br><span class="spa" style="color:#ccd6f6;text-shadow:0px 5px 11px #000000,-1px 6px 8px #0aadff,-40px 16px 30px #757575,40px -3px 30px #b8b8b8,2px 2px 0px #90e3f4;">&bull;&nbsp;YAHYA BOUROUINA</span><br><span class="spa" style="color:#8892b0;">&bull;&nbsp;I build things for the web</span></span>
+				<br><span style="color:#7e88a5;font-size:20px;">&nbsp;&nbsp;I'm a <span style="color:#546980;"><b>design technologist</b></span> in <span style="color:#546980;"><b>Algeria.</b></span> I like working on the <span style="color:#546980;"><b>front-end</b></span><br>of the web. This is my site, <span style="color:#546980;"><b>yahya.codes</b></span>, where I blog and share<br>whatever side projects I've been working on.</span>
+			</p>
+			<a class="see_my_works_btn" href="#">See My Works</a>
+			<div class="moon-outer">
+				<div class="moon">
+					<div class="details"></div>
+					<div class="details one"></div>
+					<div class="details two"></div>
+					<div class="details three"></div>
+					<div class="details four"></div>
+				</div>
+			</div>
+		</header><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1a2238" fill-opacity="1" d="M0,128L26.7,154.7C53.3,181,107,235,160,240C213.3,245,267,203,320,192C373.3,181,427,203,480,186.7C533.3,171,587,117,640,117.3C693.3,117,747,171,800,213.3C853.3,256,907,288,960,261.3C1013.3,235,1067,149,1120,144C1173.3,139,1227,213,1280,213.3C1333.3,213,1387,139,1413,101.3L1440,64L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path></svg>
+		<!-- end of Header -->
+		
+		<!-- load body -->
+		<div id="loading_in_enter_the_web">
+			<img src="./img/logo-AHYA.png" id="logo-AHYA">
+			<img src="./img/logo-CODES.png" id="logo-CODES">
+			<img src="./img/log-Y.png" id="log-Y">
+		</div>
+		<div id="darkWeb" class="darkWeb">
+			<div class="darkWeb">
+				<div class="darkWeb" style="background:rgba(0,0,0,.1);">
+					<button onclick="close_read_only_mode()">close</button>
+				</div>
+			</div>
+		</div>
+		<div id="first_easter_egg_ad">
+			<div class="header_of_first_easter_egg_ad">
+				<h1 style="font-size:27px;">YOU FOUND THE 1<sup>st</sup><br>EASTER-EGG !</h1>
+			</div>
+			<img src="./img/easter-egg-lolly.png" width="80%"/>
+			<p>Click continue to complete searching and<br> do not exit <i>read only mode</i></p>
+			<button class="nah_im_not_in_game" onclick='document.getElementById("darkWeb").style.display = "none";document.getElementById("cursor_of_light").style.display = "none";document.getElementById("first_easter_egg_ad").style.transform = "scale(0)";'>Cancel</button><br>
+			<button class="keep_eggs">Continue</button>
+		</div>
+		<!-- end of load body -->
+		
+		<!-- footer -->
+		<footer id="foot">
+			<a href="https://yahyacodes.itch.io/" target="_blank">
+				<svg fill="#758CA3" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="20"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.172 1.787c-1.396 0.828-4.145 3.984-4.172 4.812v1.375c0 1.735 1.625 3.267 3.099 3.267 1.771 0 3.251-1.469 3.251-3.213 0 1.744 1.421 3.213 3.197 3.213 1.771 0 3.151-1.469 3.151-3.213 0 1.744 1.516 3.213 3.287 3.213h0.032c1.776 0 3.291-1.469 3.291-3.213 0 1.744 1.381 3.213 3.152 3.213s3.197-1.469 3.197-3.213c0 1.744 1.475 3.213 3.245 3.213 1.479 0 3.104-1.532 3.104-3.267v-1.375c-0.032-0.828-2.776-3.984-4.177-4.812-4.339-0.156-7.344-0.183-11.823-0.183-4.484 0.005-10.593 0.073-11.828 0.183zM12.677 10.421c-0.183 0.308-0.385 0.568-0.625 0.797v0.005c-0.672 0.651-1.588 1.057-2.599 1.057-1.016 0-1.932-0.407-2.599-1.063-0.245-0.235-0.428-0.489-0.6-0.787-0.167 0.297-0.4 0.552-0.645 0.787-0.672 0.656-1.588 1.063-2.599 1.063 0 0 0 0-0.005 0-0.12 0-0.245-0.036-0.349-0.073-0.14 1.485-0.203 2.901-0.224 3.937v0.005c-0.005 0.527-0.005 0.953-0.011 1.552 0.032 3.115-0.307 10.089 1.376 11.803 2.604 0.604 7.396 0.88 12.197 0.885h0.005c4.807-0.005 9.593-0.281 12.197-0.885 1.683-1.713 1.344-8.688 1.376-11.803-0.005-0.599-0.005-1.025-0.011-1.552v-0.005c-0.021-1.036-0.079-2.452-0.224-3.937-0.099 0.037-0.229 0.073-0.349 0.073 0 0-0.005 0-0.005 0-1.011 0-1.927-0.407-2.599-1.063h0.005c-0.245-0.235-0.479-0.489-0.645-0.787h-0.005c-0.167 0.297-0.355 0.552-0.595 0.787-0.667 0.656-1.583 1.063-2.599 1.063-1.011 0-1.927-0.407-2.599-1.063-0.24-0.229-0.443-0.495-0.615-0.787l-0.011-0.016c-0.172 0.308-0.38 0.573-0.615 0.803-0.672 0.656-1.588 1.063-2.599 1.063 0 0-0.005 0-0.005 0-0.031 0-0.068 0-0.104-0.005-0.036 0.005-0.073 0.005-0.109 0.005 0 0 0 0-0.005 0-1.011 0-1.927-0.407-2.593-1.063-0.24-0.229-0.443-0.495-0.609-0.787l-0.011-0.016zM10.005 13.875c1.057 0.005 1.995 0 3.161 1.271 0.916-0.093 1.875-0.14 2.833-0.14s1.917 0.047 2.833 0.14c1.167-1.271 2.104-1.271 3.161-1.271h0.005c0.5 0 2.5 0 3.891 3.912l1.495 5.369c1.109 3.995-0.355 4.095-2.177 4.095-2.708-0.1-4.208-2.068-4.208-4.037-1.5 0.251-3.251 0.371-5 0.371s-3.5-0.12-4.995-0.371c0 1.969-1.5 3.937-4.208 4.037-1.828-0.005-3.292-0.1-2.183-4.095l1.495-5.369c1.396-3.912 3.396-3.912 3.896-3.912zM16 16.953c-0.005 0-2.849 2.62-3.364 3.547l1.864-0.073v1.625c0 0.079 0.751 0.047 1.5 0.011 0.749 0.036 1.495 0.068 1.495-0.011v-1.625l1.869 0.073c-0.515-0.927-3.364-3.547-3.364-3.547z"></path> </g></svg>
+				<span>Itch.io</span>
+			</a>
+			<br><br>
+			<a href="https://www.instagram.com/bimokayoba/" target="_blank">
+				<svg viewBox="0 0 24 24" id="meteor-icon-kit__regular-instagram" fill="none" xmlns="http://www.w3.org/2000/svg" width="20"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.9962 0.0078125C8.73824 0.0078125 8.32971 0.021622 7.05019 0.080003C5.77333 0.138241 4.90129 0.341051 4.13824 0.637622C3.34938 0.944146 2.68038 1.35434 2.01343 2.02124C1.34652 2.68819 0.936333 3.35719 0.629809 4.14605C0.333238 4.9091 0.130429 5.78115 0.0721905 7.058C0.0138095 8.33753 0 8.74605 0 12.0041C0 15.262 0.0138095 15.6705 0.0721905 16.9501C0.130429 18.2269 0.333238 19.099 0.629809 19.862C0.936333 20.6509 1.34652 21.3199 2.01343 21.9868C2.68038 22.6537 3.34938 23.0639 4.13824 23.3705C4.90129 23.667 5.77333 23.8698 7.05019 23.9281C8.32971 23.9864 8.73824 24.0002 11.9962 24.0002C15.2542 24.0002 15.6627 23.9864 16.9422 23.9281C18.2191 23.8698 19.0911 23.667 19.8542 23.3705C20.643 23.0639 21.312 22.6537 21.979 21.9868C22.6459 21.3199 23.0561 20.6509 23.3627 19.862C23.6592 19.099 23.862 18.2269 23.9202 16.9501C23.9786 15.6705 23.9924 15.262 23.9924 12.0041C23.9924 8.74605 23.9786 8.33753 23.9202 7.058C23.862 5.78115 23.6592 4.9091 23.3627 4.14605C23.0561 3.35719 22.6459 2.68819 21.979 2.02124C21.312 1.35434 20.643 0.944146 19.8542 0.637622C19.0911 0.341051 18.2191 0.138241 16.9422 0.080003C15.6627 0.021622 15.2542 0.0078125 11.9962 0.0078125ZM11.9962 2.16929C15.1993 2.16929 15.5788 2.18153 16.8437 2.23924C18.0133 2.29257 18.6485 2.488 19.0712 2.65229C19.6312 2.86991 20.0308 3.12986 20.4506 3.54967C20.8704 3.96943 21.1303 4.36905 21.348 4.929C21.5122 5.35172 21.7077 5.98691 21.761 7.15653C21.8187 8.42148 21.831 8.80091 21.831 12.0041C21.831 15.2071 21.8187 15.5866 21.761 16.8515C21.7077 18.0211 21.5122 18.6563 21.348 19.0791C21.1303 19.639 20.8704 20.0386 20.4506 20.4584C20.0308 20.8782 19.6312 21.1381 19.0712 21.3558C18.6485 21.5201 18.0133 21.7155 16.8437 21.7688C15.579 21.8265 15.1996 21.8388 11.9962 21.8388C8.79286 21.8388 8.41352 21.8265 7.14871 21.7688C5.97909 21.7155 5.3439 21.5201 4.92119 21.3558C4.36124 21.1381 3.96162 20.8782 3.54186 20.4584C3.1221 20.0386 2.8621 19.639 2.64448 19.0791C2.48019 18.6563 2.28476 18.0211 2.23143 16.8515C2.17371 15.5866 2.16148 15.2071 2.16148 12.0041C2.16148 8.80091 2.17371 8.42148 2.23143 7.15653C2.28476 5.98691 2.48019 5.35172 2.64448 4.929C2.8621 4.36905 3.12205 3.96943 3.54186 3.54967C3.96162 3.12986 4.36124 2.86991 4.92119 2.65229C5.3439 2.488 5.97909 2.29257 7.14871 2.23924C8.41367 2.18153 8.7931 2.16929 11.9962 2.16929ZM11.9962 16.0028C9.78776 16.0028 7.99748 14.2125 7.99748 12.0041C7.99748 9.79558 9.78776 8.00529 11.9962 8.00529C14.2047 8.00529 15.995 9.79558 15.995 12.0041C15.995 14.2125 14.2047 16.0028 11.9962 16.0028ZM11.9962 5.84381C8.594 5.84381 5.836 8.60181 5.836 12.0041C5.836 15.4062 8.594 18.1642 11.9962 18.1642C15.3984 18.1642 18.1564 15.4062 18.1564 12.0041C18.1564 8.60181 15.3984 5.84381 11.9962 5.84381ZM18.3998 7.03996C19.1949 7.03996 19.8394 6.39548 19.8394 5.60043C19.8394 4.80538 19.1949 4.16086 18.3998 4.16086C17.6048 4.16086 16.9603 4.80538 16.9603 5.60043C16.9603 6.39548 17.6048 7.03996 18.3998 7.03996Z" fill="#758CA3"></path></g></svg>
+				<span>Instagram</span>
+			</a>
+			<br><br>
+			<a href="https://gamejolt.com/invite/bimokayoba" target="_blank">
+				<svg fill="#758CA3" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" stroke="#758CA3" stroke-width="0" width="20"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_iconCarrier"><path d="M6.353 0v2.824H4.94v2.823H3.53v2.824H2.118v2.823H.706v2.824h8.47v2.823H7.765v2.824H6.353v2.823h1.412v-1.412h1.411v-1.411h1.412v-1.412H12V16.94h1.412v-1.41h1.412v-1.411h1.411v-1.412h1.412v-1.412h1.412V9.882h1.412V8.471h1.411V7.059h-4.235V5.647h1.412V4.235h1.412V2.824h1.411V1.412h1.412V0zm0 22.588H4.94V24h1.412zM7.765 2.824h9.882v1.411h-1.412v1.412h-1.411V7.06h-1.412v1.41H12v1.411h1.412v1.412H12V9.882h-1.412v1.412H9.176V9.882H7.765v1.412H6.353V9.882H4.94V8.471h1.412V5.647h1.412zM6.353 8.47v1.411h1.412v-1.41zm2.823 1.411h1.412v-1.41H9.176zm5.648 0h1.411v1.412h-1.411z"></path></g></svg>
+				<span>Gamejolt</span>
+			</a>
+			<br><br>
+			<a href="https://twitter.com/BourouinaYahya" target="_blank">
+				<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="2" width="20"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_iconCarrier"> <path d="M21.9999 5.9246C21.2644 6.25051 20.4744 6.47071 19.6437 6.57025C20.4911 6.06289 21.1411 5.25782 21.4477 4.29948C20.6549 4.76984 19.7767 5.1116 18.8422 5.29481C18.0935 4.49855 17.0277 4 15.8474 4C13.5819 4 11.7445 5.8374 11.7445 8.10464C11.7445 8.42526 11.7815 8.73707 11.8502 9.03832C8.43877 8.86656 5.41666 7.23263 3.39252 4.75046C3.04019 5.35823 2.8376 6.06289 2.8376 6.81335C2.8376 8.23677 3.56252 9.4937 4.66267 10.2292C3.98972 10.2072 3.35729 10.0231 2.80413 9.71567V9.76852C2.80413 11.7565 4.21786 13.4151 6.09577 13.7921C5.75049 13.8855 5.38847 13.9348 5.015 13.9348C4.75075 13.9348 4.49267 13.9102 4.24252 13.8626C4.76485 15.4921 6.27987 16.6795 8.07587 16.7112C6.67095 17.8122 4.90137 18.4684 2.97942 18.4684C2.64823 18.4684 2.32144 18.449 1.99994 18.4112C3.8162 19.5765 5.97246 20.2547 8.28903 20.2547C15.8377 20.2547 19.9644 14.0026 19.9644 8.58029C19.9644 8.40412 19.9599 8.2262 19.952 8.05003C20.7536 7.47045 21.4494 6.74905 21.9982 5.92724L21.9999 5.9246Z" stroke="#758CA3" stroke-linejoin="round"></path> </g></svg>
+				<span>Twitter</span>
+			</a>&nbsp;
+			<br><br>
+			<a href="https://github.com/YahyaBourouina" target="_blank">
+				<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_iconCarrier"> <path d="M15.1586 22C15.334 20.0952 15.5792 16.6662 14.6321 15.8095C13.5793 16.2857 25.1608 14.381 19.37 5.33333C19.721 4.69841 19.8965 3.42857 19.37 2C17.7908 1.9999 16.2115 2.47629 15.1586 3.42857C14.8076 3.26988 13.6846 2.95248 12 2.95248" stroke="#758CA3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9.15591 22C9.10069 21.3343 9.0378 20.4823 9.01576 19.619M12 2.95248C10.4831 2.95248 9.4719 3.26988 9.15588 3.42857C8.20785 2.47629 6.78579 1.9999 5.36376 2C4.88971 3.42857 5.04776 4.69841 5.36376 5.33333C0.149524 14.381 10.5779 16.2857 9.62993 15.8095C9.13002 16.3117 8.99903 17.6979 9.00805 19.1429M9.00805 19.1429C7.46206 18.8254 4.89608 17.5238 3 16C5.84412 18.381 4.3701 19.619 9.01576 19.619M9.00805 19.1429C9.00904 19.3012 9.01171 19.4603 9.01576 19.619" stroke="#758CA3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+				<span>GitHub</span>
+			</a>
+			<br><br>
+			<a href="https://www.sololearn.com/profile/19910784" target="_blank">
+				<svg style="color: rgb(117, 140, 163);" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20"><title>Sololearn</title><path d="M18.621 16.084a8.483 8.483 0 0 1-2.922 6.427c-.603.53-.19 1.522.613 1.442a9.039 9.039 0 0 0 1.587-.3 8.32 8.32 0 0 0 5.787-5.887 8.555 8.555 0 0 0-8.258-10.832 9.012 9.012 0 0 0-1.045.06c-.794.1-.995 1.161-.29 1.542 2.701 1.452 4.53 4.285 4.53 7.548zM7.906 18.597a8.538 8.538 0 0 1-6.45-2.913c-.532-.6-1.527-.19-1.446.61a8.943 8.943 0 0 0 .3 1.582c.794 2.823 3.064 5.026 5.907 5.766 5.727 1.492 10.87-2.773 10.87-8.229 0-.35-.02-.7-.06-1.04-.1-.792-1.165-.992-1.547-.29a8.597 8.597 0 0 1-7.574 4.514zM5.382 7.916a8.483 8.483 0 0 1 2.924-6.427c.603-.531.19-1.522-.613-1.442a9.93 9.93 0 0 0-1.598.29A8.339 8.339 0 0 0 .31 6.224a8.555 8.555 0 0 0 8.258 10.832c.352 0 .704-.02 1.045-.06.794-.1.995-1.162.29-1.542a8.54 8.541 0 0 1-4.52-7.538zm10.72-2.513a8.538 8.538 0 0 1 6.45 2.913c.53.6 1.526.19 1.445-.61a8.945 8.945 0 0 0-.3-1.583C22.902 3.3 20.632 1.098 17.788.357 12.071-1.145 6.928 3.12 6.928 8.576c0 .35.02.7.06 1.041.1.791 1.168.991 1.549.29A8.58 8.58 0 0 1 16.1 5.404z" fill="#758ca3"></path></svg>
+				<span>Sololearn</span>
+			</a>
+			<br><br>
+			<a href="https://codepen.io/someone12301230" target="_blank">
+				<svg style="color: rgb(117, 140, 163);" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-codepen"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon><line x1="12" y1="22" x2="12" y2="15.5"></line><polyline points="22 8.5 12 15.5 2 8.5"></polyline><polyline points="2 15.5 12 8.5 22 15.5"></polyline><line x1="12" y1="2" x2="12" y2="8.5"></line></svg>
+				<span>Codepen</span>
+			</a>
+			<br><br>
+			<a href="mailto:yahya.bourouina.acc@gmail.com" target="_blank">
+				<svg style="color: rgb(117, 140, 163);" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" zoomAndPan="magnify" viewBox="0 0 30 30.000001" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 3.460938 6.5625 L 26.539062 6.5625 L 26.539062 24.707031 L 3.460938 24.707031 Z M 3.460938 6.5625 " clip-rule="nonzero" fill="#758ca3"></path></clipPath></defs><g clip-path="url(#id1)"><path fill="#758ca3" d="M 24.230469 11.101562 L 15 16.769531 L 5.769531 11.101562 L 5.769531 8.832031 L 15 14.503906 L 24.230469 8.832031 Z M 24.230469 6.5625 L 5.769531 6.5625 C 4.492188 6.5625 3.472656 7.578125 3.472656 8.832031 L 3.460938 22.441406 C 3.460938 23.695312 4.492188 24.707031 5.769531 24.707031 L 24.230469 24.707031 C 25.507812 24.707031 26.539062 23.695312 26.539062 22.441406 L 26.539062 8.832031 C 26.539062 7.578125 25.507812 6.5625 24.230469 6.5625 " fill-opacity="1" fill-rule="nonzero"></path></g></svg>
+				<span>yahya.bourouina.acc@gmail.com</span>
+			</a>
+			<br><br>
+		</footer>
+		<!-- end of footer -->
+		<br />
+		<!-- Intro -->
+		<div class="body_finally"><br><br><br>
+			<h1><span style="color:#5AE7C8;font-size:25px;">01.</span>&nbsp;<b style="color: #CCD6F6;">About Me</b><span style="width:200px;" class="span_upper_the_line"></span></h1>
+			<br>
+			<p class="introducing_my_self">Hello! My name is Yahya and I enjoy creating things that live on the internet. My interest in web development started back in 2018 when I decided to ask my big sister about information technology, she showed me how HTML Tags work (h1, p, img, video...) I was very surprised so I wanted to search more about HTML, and since I was excelling in my studies, I could easily understand HTML, CSS, and a little bit of JS in English, which has many contents and branching information in every word of those languages.</p><br><br>
+			<img src="./img/me.jpg" class="sideImgAboutMe" />
+				<span class="span_of_the_sideImgAboutMe">Yahya Bourouina</span><br>
+			<h1 class="some_things_ive_built_title"><span style="color:#5AE7C8;font-size:25px;">02.</span>&nbsp;<b style="color: #CCD6F6;">Some Things I’ve Built</b><span style="width:420px;" class="span_upper_the_line"></span></h1>
+			<br>
+			<div class="files project1">
+				<img class="opentab" src="./img/open.png" onclick='window.open("https://yahyacodes.itch.io/kostandem", "_blank")'>
+				<img class="file_img" src="./img/file.png">
+				<h2>Kostandem</h2><br>
+				<h5>My first short demo game I made in just 4 days, in the game, someone was lost 
+				in dark forest because of tsunami then he falls... <span>See more</span>
+				</h5>
+			</div>
+			<div class="files project2">
+				<img class="opentab" src="./img/open.png" onclick='window.open("#", "_blank")'>
+				<img class="file_img" src="./img/iconT.png">
+				<h2>yahya.codes</h2><br>
+				<h5>This is my first website created by me, I created it for sharing my 
+				activities, I started it when I was 13 years old, in 2022...<span>See more</span>
+				</h5>
+			</div>
+			<div class="files project3">
+				<img class="opentab" src="./img/open.png" onclick='window.open("https://wokwi.com/projects/375606339047876609", "_blank")'>
+				<img class="file_img" src="./img/ElectroSafe.png">
+				<h2>ElectroSafe</h2><br>
+				<h5>First ever finished arduino project in my projects, While studying IoT,
+				just for testing my experience I've created that where you... <span>See more</span>
+				</h5>
+			</div>
+			<div class="files project4">
+				<img class="opentab" src="./img/open.png" onclick='window.open("https://www.google.com", "_blank")'>
+				<img class="file_img" src="./img/file.png">
+				<h2>Title</h2><br>
+				<h5>description qdoppaz azdopkj adzok a^zpd azdok azdô azdok azpodik azopd
+				smolkd zadopkpza azdkopzad azdo^kzd dazpokdza dpozadp... <span>See more</span>
+				</h5>
+			</div>
+			<div class="files project5">
+				<img class="opentab" src="./img/open.png" onclick='window.open("https://www.google.com", "_blank")'>
+				<img class="file_img" src="./img/file.png">
+				<h2>Title</h2><br>
+				<h5>description qdoppaz azdopkj adzok a^zpd azdok azdô azdok azpodik azopd
+				smolkd zadopkpza azdkopzad azdo^kzd dazpokdza dpozadp... <span>See more</span>
+				</h5>
+			</div>
+			<br>
+			<h1 class="myskills"><span style="color:#5AE7C8;font-size:25px;">03.</span>&nbsp;<b style="color: #CCD6F6;">My Skills</b><span style="width:220px;" class="span_upper_the_line"></span></h1><br>
+			<p style="margin-left:70px;">&#10148;HTML</p><br>
+			<div id="skillSections">
+				<div class="s_kills">
+					<div class="skills html" data-progress="74"><span>74%&nbsp;</span></div>
+				</div>
+				<br><br>
+				<p style="margin-left:70px;">&#10148;CSS</p><br>
+				<div class="s_kills">
+					<div class="skills css" data-progress="57"><span>57%&nbsp;</span></div>
+				</div>
+				<br><br>
+				<p style="margin-left:70px;">&#10148;JavaScript</p><br>
+				<div class="s_kills">
+					<div class="skills js" data-progress="32"><span>32%&nbsp;</span></div>
+				</div>
+				<br><br>
+				<p style="margin-left:70px;">&#10148;C#</p><br>
+				<div class="s_kills">
+					<div class="skills c" data-progress="20"><span>20%&nbsp;</span></div>
+				</div><br><br><br>
+			</div>
+			<h1><span style="color:#5AE7C8;font-size:25px;">04.</span>&nbsp;<b style="color: #CCD6F6;">Get In Touch</b><span style="width:250px;" class="span_upper_the_line"></span></h1><br>
+			<div class="contactContainer">
+				<a href="mailto:yahya.bourouina.acc@gmail.com?subject=Hello Yahya! I'm happy to talk with you! ..."><img src="./img/email.png"></a>
+				<span class="spna">○</span>
+				<form action="#"  class="contact_us">
+					<div>
+						<p style="margin: 0;">&#10148;Name :</p>
+						<input style="width:100%;font-family:'Inconsolata';" type="name" name="name" class="inputAnim" placeholder="Enter Your Name..."><br><br>
+						<p style="margin: 0;">&#10148;Email :</p>
+						<input style="width:100%;font-family:'Inconsolata';" type="email" name="email" class="inputAnim" placeholder="Enter Your Email..."><br><br>
+						<p style="margin: 0;">&#10148;Message :</p>
+						<textarea type="subject" style="max-width:100%;min-width:100%;max-height:250px;min-height:200px;line-height: 1.5em;resize: vertical;" name="message" class="inputAnim" placeholder="Enter Your Message..."></textarea><br><br>
+						<button class="subBtn" type="submit"><span>Send</span></button>
+						<span class="innerTxt">AAAA</span>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="about">
+			<!-- <div class="about_text"> -->
+				<!-- <h1>About Me</h1> -->
+				<!-- <p>Hi, I'm Yahya. I'm a web developer and a portfolio maker. I love creating websites and showing my work to the world.</p> -->
+			<!-- </div> -->
+			<!-- <div class="img_in_about"> -->
+				<!-- <img src="./img/icon.png" alt="Yahya's picture"> -->
+			<!-- </div> -->
+		</div>
+  
+		<div id="portfolio">
+			
+		</div>
+		<div id="contacty">
+			<form action="#"  class="contacty">
+				<div>
+					<p style="margin: 0;color:#CCD6F6;font-family:'Inconsolata';">&#10148;Name :</p>
+					<input style="width:100%;font-family:'Inconsolata';" type="name" name="name" class="inputAnim" placeholder="Enter Your Name..."><br><br>
+					<p style="margin: 0;color:#CCD6F6;font-family:'Inconsolata';">&#10148;Email :</p>
+					<input style="width:100%;font-family:'Inconsolata';" type="email" name="email" class="inputAnim" placeholder="Enter Your Email..."><br><br>
+					<p style="margin: 0;color:#CCD6F6;font-family:'Inconsolata';">&#10148;Message :</p>
+					<textarea type="subject" style="max-width:100%;min-width:100%;max-height:250px;min-height:200px;line-height: 1.5em;resize: vertical;" name="message" class="inputAnim" placeholder="Enter Your Message..."></textarea><br><br>
+					<button class="subBtn" type="submit"><span>Send</span></button>
+					<span style="font-family:'Inconsolata';" class="innerText">AAAA</span>
+				</div>
+			</form>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<!-- cursor of light ! -->
+		<div id="cursor_of_light"></div>
+		<!-- end of cursor of light ! -->
+
+<script>
+//loading_in_enter_the_web
+function load() {
+	setTimeout(function() {
+		document.getElementById("loading_in_enter_the_web").style.display = "none";
+		document.getElementById("darkWeb").style.display = "none";
+		document.getElementById("cursor_of_light").style.display = "none";
+	}, 3000);
+	
+	setTimeout(function() {
+		document.getElementById("darkWeb").style.display = "inline-block";
+		document.getElementById("cursor_of_light").style.display = "inline-block";
+		//document.getElementById("first_easter_egg_ad").style.transform = "scale(1)";
+	}, 300000);
+}
+window.onload = load;
+//end of loading_in_enter_the_web
+
+// navbar
+function openPhoneNav() {
+	var span1 = document.getElementById("span1");
+	var span2 = document.getElementById("span2");
+	var span3 = document.getElementById("span3");
+	var nav_main_in_mobile = document.getElementById("nav_main_in_mobile_");
+	
+	span1.classList.toggle("span1_anim");
+	span2.classList.toggle("span2_anim");
+	span3.classList.toggle("span3_anim");
+	nav_main_in_mobile.classList.toggle("nav_main_in_mobile_anim");
+	
+	span1.classList.toggle("span1");
+	span2.classList.toggle("span2");
+	span3.classList.toggle("span3");
+	nav_main_in_mobile.classList.toggle("nav_main_in_mobile");
+}
+// end of navbar
+
+
+
+// cursor_of_light
+let cursor_of_light = document.getElementById("cursor_of_light");
+	//Detect touch device
+function isTouchDevice() {
+	try {
+		//We try to create TouchEvent. It would fail for desktops and throw error
+		document.createEvent("TouchEvent");
+		return true;
+	} catch (e) {
+		return false;
+	}
+}
+const move = (e) => {
+	//Try, catch to avoid any errors for touch screens (Error thrown when user doesn't move his finger)
+	try {
+		//PageX and PageY return the position of client's cursor from top left of screen
+		var x = !isTouchDevice() ? e.pageX : e.touches[0].pageX;
+		var y = !isTouchDevice() ? e.pageY : e.touches[0].pageY;
+	} catch (e) {}
+	//set left and top of div based on mouse position
+	cursor_of_light.style.left = x -5 + "px";
+	cursor_of_light.style.top = y -5 + "px";
+};
+	//For mouse
+document.addEventListener("mousemove", (e) => {
+	move(e);
+});
+	//For touch
+document.addEventListener("touchmove", (e) => {
+	move(e);
+});
+
+
+
+
+function close_read_only_mode() {
+	document.getElementById("darkWeb").style.display = "none";
+	document.getElementById("cursor_of_light").style.display = "none";
+	document.getElementById("first_easter_egg_ad").style.transform = "scale(0)";
+}
+// end of cursor_of_light
+
+//skillSections
+const skillSections = document.getElementById('skillSections');
+
+const progressSkills = document.querySelectorAll('.skills');
+
+function showSkill() {
+	progressSkills.forEach(s_kills => {
+		const valueSkill = s_kills.dataset.progress;
+		s_kills.style.width = valueSkill+'%';
+		
+		console.log(valueSkill);
+	});
+}
+
+function hideSkill() {
+	progressSkills.forEach(kills => {
+		kills.style.width = '0%';
+	});
+}
+
+window.addEventListener('scroll',() => {
+	const skillpos = skillSections.getBoundingClientRect().top;
+	const screePos = window.innerHeight;
+	
+	if(skillpos < screePos) {
+		console.log('show progress');
+		showSkill();
+	}else {
+		console.log('hide progress');
+		hideSkill();
+	}
+});
+//end of skillSections
+
+
+const form = document.querySelector(".contact_us"),
+statusTxt = form.querySelector(".innerTxt");
+
+form.onsubmit = (e)=>{
+  e.preventDefault();
+  statusTxt.style.color = "#FFF";
+  statusTxt.style.display = "block";
+  statusTxt.innerText = "Sending your message...";
+  form.classList.add("disabled");
+
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "./php/message.php", true);
+  xhr.onload = ()=>{
+    if(xhr.readyState == 4 && xhr.status == 200){
+      let response = xhr.response;
+      if(response.indexOf("Email and message field is required!") != -1 || response.indexOf("Enter a valid email address!") != -1 || response.indexOf("Sorry, failed to send your message!") != -1){
+        statusTxt.style.color = "red";
+      }else{
+        form.reset();
+        setTimeout(()=>{
+          statusTxt.style.display = "none";
+        }, 3000);
+      }
+      statusTxt.innerText = response;
+      form.classList.remove("disabled");
+    }
+  }
+  let formData = new FormData(form);
+  xhr.send(formData);
+}
+
+const formT = document.querySelector(".contacty"),
+statusText = formT.querySelector(".innerText");
+
+formT.onsubmit = (a)=>{
+  a.preventDefault();
+  statusText.style.color = "#FFF";
+  statusText.style.display = "block";
+  statusText.innerText = "Sending your message...";
+  formT.classList.add("disabled_two");
+
+  let xmr = new XMLHttpRequest();
+  xmr.open("POST", "./php/message.php", true);
+  xmr.onload = ()=>{
+    if(xmr.readyState == 4 && xmr.status == 200){
+      let reponse = xmr.reponse;
+      if(reponse.indexOf("Email and message field is required!") != -1 || reponse.indexOf("Enter a valid email address!") != -1 || reponse.indexOf("Sorry, failed to send your message!") != -1){
+        statusText.style.color = "red";
+      }else{
+        formT.reset();
+        setTimeout(()=>{
+          statusText.style.display = "none";
+        }, 3000);
+      }
+      statusText.innerText = reponse;
+      formT.classList.remove("disabled");
+    }
+  }
+  let formDatae = new FormData(formT);
+  xmr.send(formDatae);
+}
+
+
+var about = document.getElementById("about");
+var portfolio = document.getElementById("portfolio");
+var contacty = document.getElementById("contacty");
+var footer = document.getElementById("foot");
+
+function showAbout_andCloseTheOthers() {
+	about.style.width = "100%";
+	about.style.height = "100%";
+	about.style.left = "0";//
+	contacty.style.width = "0%";
+	contacty.style.height = "0%";
+	contacty.style.left = "-150%";//
+	portfolio.style.width = "0%";
+	portfolio.style.height = "0%";
+	portfolio.style.left = "-150%";//
+	footer.style.left = "-150px";
+	
+	var span1 = document.getElementById("span1");
+	var span2 = document.getElementById("span2");
+	var span3 = document.getElementById("span3");
+	var nav_main_in_mobile = document.getElementById("nav_main_in_mobile_");
+	
+	span1.classList.toggle("span1");
+	span2.classList.toggle("span2");
+	span3.classList.toggle("span3");
+	nav_main_in_mobile.classList.toggle("nav_main_in_mobile");
+	
+	span1.classList.toggle("span1_anim");
+	span2.classList.toggle("span2_anim");
+	span3.classList.toggle("span3_anim");
+	nav_main_in_mobile.classList.toggle("nav_main_in_mobile_anim");
+}
+function showContact_andCloseTheOthers() {
+	about.style.width = "0%";
+	about.style.height = "0%";
+	about.style.left = "-150%";//
+	contacty.style.width = "100%";
+	contacty.style.height = "100%";
+	contacty.style.left = "0";//
+	portfolio.style.width = "0%";
+	portfolio.style.height = "0%";
+	portfolio.style.left = "-150%";//
+	footer.style.left = "-150px";
+	
+	var span1 = document.getElementById("span1");
+	var span2 = document.getElementById("span2");
+	var span3 = document.getElementById("span3");
+	var nav_main_in_mobile = document.getElementById("nav_main_in_mobile_");
+	
+	span1.classList.toggle("span1");
+	span2.classList.toggle("span2");
+	span3.classList.toggle("span3");
+	nav_main_in_mobile.classList.toggle("nav_main_in_mobile");
+	
+	span1.classList.toggle("span1_anim");
+	span2.classList.toggle("span2_anim");
+	span3.classList.toggle("span3_anim");
+	nav_main_in_mobile.classList.toggle("nav_main_in_mobile_anim");
+}
+function showPortfolio_andCloseTheOthers() {
+	about.style.width = "0%";
+	about.style.height = "0%";
+	about.style.left = "-150%";//
+	contacty.style.width = "0%";
+	contacty.style.height = "0%";
+	contacty.style.left = "-150%";//
+	portfolio.style.width = "100%";
+	portfolio.style.height = "100%";
+	portfolio.style.left = "0";//
+	footer.style.left = "-150px";
+	
+	var span1 = document.getElementById("span1");
+	var span2 = document.getElementById("span2");
+	var span3 = document.getElementById("span3");
+	var nav_main_in_mobile = document.getElementById("nav_main_in_mobile_");
+	
+	span1.classList.toggle("span1");
+	span2.classList.toggle("span2");
+	span3.classList.toggle("span3");
+	nav_main_in_mobile.classList.toggle("nav_main_in_mobile");
+	
+	span1.classList.toggle("span1_anim");
+	span2.classList.toggle("span2_anim");
+	span3.classList.toggle("span3_anim");
+	nav_main_in_mobile.classList.toggle("nav_main_in_mobile_anim");
+}
+function showHome_andCloseTheOthers_maybeNoHome() {
+	about.style.width = "0%";
+	about.style.height = "0%";
+	about.style.left = "-150%";//
+	contacty.style.width = "0%";
+	contacty.style.height = "0%";
+	contacty.style.left = "-150%";//
+	portfolio.style.width = "0%";
+	portfolio.style.height = "0%";
+	portfolio.style.left = "-150%";//
+	footer.style.left = "0px";
+	
+	var span1 = document.getElementById("span1");
+	var span2 = document.getElementById("span2");
+	var span3 = document.getElementById("span3");
+	var nav_main_in_mobile = document.getElementById("nav_main_in_mobile_");
+	
+	span1.classList.toggle("span1");
+	span2.classList.toggle("span2");
+	span3.classList.toggle("span3");
+	nav_main_in_mobile.classList.toggle("nav_main_in_mobile");
+	
+	span1.classList.toggle("span1_anim");
+	span2.classList.toggle("span2_anim");
+	span3.classList.toggle("span3_anim");
+	nav_main_in_mobile.classList.toggle("nav_main_in_mobile_anim");
+}
+</script>
+
+	</body>
+</html>
